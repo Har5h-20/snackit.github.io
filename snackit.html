@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNACKit CAFE</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <style>
+       * {
+           margin: 0;
+           padding: 0;
+           box-sizing: border-box;
+           font-family: 'Poppins', sans-serif;
+           text-decoration: none;
+           list-style: none;
+       }
+
+       /* Background and Gradient Overlay */
+       .main_container {
+           min-height: 100vh;
+           background: url('img/background.webp') center/cover no-repeat;
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           justify-content: space-between;
+           position: relative;
+       }
+
+       .overlay {
+           position: absolute;
+           top: 0;
+           left: 0;
+           width: 100%;
+           height: 100%;
+           background: rgba(0, 0, 0, 0.6);
+           backdrop-filter: blur(5px);
+       }
+
+       /* Navigation Bar */
+       nav {
+           display: flex;
+           justify-content: space-between;
+           align-items: center;
+           width: 85%;
+           padding: 20px 0;
+           position: relative;
+           z-index: 2;
+           background: rgba(255, 255, 255, 0.1);
+           border-radius: 20px;
+           padding: 10px 30px;
+           backdrop-filter: blur(10px);
+       }
+
+       .logo {
+           width: 160px;
+       }
+
+       nav ul {
+           display: flex;
+           align-items: center;
+       }
+
+       nav ul li {
+           margin: 0 15px;
+       }
+
+       nav ul li a {
+           color: white;
+           font-size: 18px;
+           font-weight: 600;
+           transition: 0.3s ease-in-out;
+           position: relative;
+       }
+
+       nav ul li a::after {
+           content: "";
+           width: 0%;
+           height: 3px;
+           background: yellowgreen;
+           position: absolute;
+           left: 0;
+           bottom: -5px;
+           transition: 0.3s ease-in-out;
+       }
+
+       nav ul li a:hover::after {
+           width: 100%;
+       }
+
+       /* Hero Section */
+       .hero {
+           text-align: center;
+           color: white;
+           position: relative;
+           z-index: 2;
+           max-width: 80%;
+           margin-top: 100px;
+       }
+
+       .hero h1 {
+           font-size: 3.5rem;
+           font-weight: bold;
+           text-transform: uppercase;
+           letter-spacing: 2px;
+           background: linear-gradient(to right, #ffcc00, #ff6600);
+           -webkit-background-clip: text;
+           color: transparent;
+       }
+
+       .hero p {
+           font-size: 1.3rem;
+           margin: 15px 0 25px;
+           font-weight: 300;
+           opacity: 0.9;
+       }
+
+       .hero .cta {
+           display: inline-block;
+           background: linear-gradient(135deg, yellowgreen, #ff6600);
+           color: white;
+           padding: 12px 25px;
+           font-size: 1.2rem;
+           font-weight: bold;
+           border-radius: 30px;
+           transition: 0.3s;
+           box-shadow: 0px 4px 10px rgba(255, 165, 0, 0.3);
+       }
+
+       .hero .cta:hover {
+           transform: scale(1.05);
+           box-shadow: 0px 6px 15px rgba(255, 165, 0, 0.5);
+       }
+
+       /* Footer */
+       footer {
+           width: 100%;
+           text-align: center;
+           padding: 15px 0;
+           background: rgba(0, 0, 0, 0.7);
+           color: white;
+           position: relative;
+           z-index: 2;
+       }
+
+       .social-icons a {
+           color: yellowgreen;
+           margin: 0 15px;
+           font-size: 22px;
+           transition: 0.3s;
+       }
+
+       .social-icons a:hover {
+           color: white;
+           transform: scale(1.1);
+       }
+
+       /* Responsive Design */
+       @media (max-width: 768px) {
+           nav {
+               flex-direction: column;
+               text-align: center;
+               padding: 15px;
+           }
+
+           nav ul {
+               margin-top: 10px;
+               flex-direction: column;
+           }
+
+           nav ul li {
+               margin: 10px 0;
+           }
+
+           .hero h1 {
+               font-size: 2.8rem;
+           }
+
+           .hero p {
+               font-size: 1.1rem;
+           }
+       }
+    </style>
+</head>
+<body>
+    <div class="main_container">
+        <div class="overlay"></div>
+
+        <nav>
+            <img src="img/logo.webp" alt="SNACKit CAFE Logo" class="logo">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="https://maps.app.goo.gl/atJoiFkq7zWTHRmL6" target="_blank">Locate Us</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Reviews</a></li>
+            </ul>
+        </nav>
+
+        <div class="hero">
+            <h1>Welcome to SNACKit CAFE</h1>
+            <p>Fresh coffee, delicious snacks, and a cozy ambiance to make your day special.</p>
+            <a href="#" class="cta">Order Now</a>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 SNACKit CAFE | All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
